@@ -1,12 +1,22 @@
-version: "3.6"
+version: "3.8"
 services:
-  duo-task-client:
-    image: duo-task
+  flask-app:
+    image: duo-app:v2
     build: .
-    ports:
+    deploy:
+      replicas: 3
+    networks:
+      - duo-net
+  nginx:
+    image: nginx:alpine
+    networks:
+      - duo-net
+    prots:
       - target: 80
-      published: 80
-  networks:
-    - duo-net
+        published: 80
+    volumes:
+      - type: bind
+        source: ./nginx.conf
+        target: /etc/nginx/nginx.conf
 networks:
-    duo-net:
+  duo-net:
