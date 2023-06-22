@@ -14,6 +14,10 @@ services:
     ports:
       - target: 80
         published: 80
+    networks:
+      - duo-net
+    depends_on:
+      - flask-app
     volumes:
       - type: bind
         source: ./nginx.conf
