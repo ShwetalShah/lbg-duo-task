@@ -13,7 +13,7 @@ services:
       - duo-net
     prots:
       - target: 80
-        published: 80
+        published: 5500
     volumes:
       - type: bind
         source: ./nginx.conf
