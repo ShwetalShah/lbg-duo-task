@@ -1,6 +1,6 @@
 version: "3.6"
 services:
-  duo-task:
+  lbg-duo-task:
     image: duo-task
     build: .
     ports:
