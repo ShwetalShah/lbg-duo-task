@@ -13,9 +13,7 @@ services:
       - duo-net
     ports:
       - target: 80
-        published: 80
-    networks:
-      - duo-net
+        published: 80   
     depends_on:
       - flask-app
     volumes:
