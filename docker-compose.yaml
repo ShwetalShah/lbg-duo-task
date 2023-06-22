@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  duo-task:
+    image: duo_image
+    build: .
+    ports:
+      - target: 80
+        published: 80
+    networks:
+      - duo-net
+ networks:
+    duo-net:
