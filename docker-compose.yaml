@@ -8,5 +8,5 @@ services:
         published: 80
     networks:
       - duo-net
- networks:
+networks:
     duo-net:
