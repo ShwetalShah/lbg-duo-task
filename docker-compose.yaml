@@ -11,9 +11,9 @@ services:
     image: nginx:alpine
     networks:
       - duo-net
-    prots:
+    ports:
       - target: 80
-        published: 5500
+        published: 80
     volumes:
       - type: bind
         source: ./nginx.conf
