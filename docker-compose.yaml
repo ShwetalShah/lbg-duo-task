@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   duo-task:
-    image: duo_image
+    image: duo-task:v2
     build: .
     ports:
       - target: 80
